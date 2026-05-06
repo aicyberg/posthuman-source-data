@@ -1,11 +1,14 @@
 # 🚀 Restore Initia Node from [Posthuman](https://snapshots.initia.posthuman.digital/) Snapshots
 
+> ⚠ **Snapshot service unavailable.** The public endpoint for this chain currently does not resolve (DNS missing). Use a community snapshot provider until the service is restored. See the chain's installation-guide.md for state-sync alternatives.
+
+
 This guide explains how to restore your Initia node using a snapshot from **Posthuman**.
 
 ---
 
 ## **🛑 Step 1: Stop Initia Node**
-Before restoring, stop the Kyve process to prevent database corruption:
+Before restoring, stop the Initia process to prevent database corruption:
 
 ```bash
 sudo systemctl stop initia
@@ -35,7 +38,7 @@ rm -rf $HOME/.initia/data
 > **Note:** Since Posthuman updates snapshots **every 24 hours**, use the latest one:
 
 ```bash
-curl -L https://snapshots.initia.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.kyve
+curl -L https://snapshots.initia.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.initia
 ```
 
 

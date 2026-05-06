@@ -1,11 +1,14 @@
-# 🚀 Restore Juno Node from [Posthuman](https://snapshots.juno-testnet.posthuman.digital/) Snapshots
+# 🚀 Restore Juno Node from [Posthuman](https://snapshots.juno.posthuman.digital/) Snapshots
+
+> ⚠ **Snapshot service unavailable.** The public endpoint for this chain currently does not resolve (DNS missing). Use a community snapshot provider until the service is restored. See the chain's installation-guide.md for state-sync alternatives.
+
 
 This guide explains how to restore your Juno node using a snapshot from **Posthuman**.
 
 ---
 
 ## **🛑 Step 1: Stop juno Node**
-Before restoring, stop the Kyve process to prevent database corruption:
+Before restoring, stop the Juno process to prevent database corruption:
 
 ```bash
 sudo systemctl stop juno
@@ -35,7 +38,7 @@ rm -rf $HOME/.juno/data
 > **Note:** Since Posthuman updates snapshots **every 24 hours**, use the latest one:
 
 ```bash
-curl -L https://snapshots.juno-testnet.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.juno
+curl -L https://snapshots.juno.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.juno
 ```
 
 
@@ -46,7 +49,7 @@ curl -L https://snapshots.juno-testnet.posthuman.digital/data_latest.lz4 | lz4 -
 Move back the **backup validator state file**:
 
 ```bash
-mv $HOME/.kyve/priv_validator_state.json.backup $HOME/.juno/data/priv_validator_state.json
+mv $HOME/.juno/priv_validator_state.json.backup $HOME/.juno/data/priv_validator_state.json
 ```
 
 ---

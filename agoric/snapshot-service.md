@@ -1,4 +1,7 @@
 # POSTHUMAN snapshot service for Agoric
+
+> ⚠ **Snapshot service unavailable.** The public endpoint for this chain currently does not resolve (DNS missing). Use a community snapshot provider until the service is restored. See the chain's installation-guide.md for state-sync alternatives.
+
 Updated every 24 hours
 
 ## Stop the service

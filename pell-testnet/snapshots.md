@@ -1,5 +1,8 @@
 # 🚀 Restore Pell Testnet Node from [Posthuman](https://snapshots.pell-testnet.posthuman.digital/) Snapshots
 
+> ⚠ **Snapshot service unavailable.** The public endpoint for this chain currently does not resolve (DNS missing). Use a community snapshot provider until the service is restored. See the chain's installation-guide.md for state-sync alternatives.
+
+
 This guide explains how to restore your Pell testnet node using a snapshot from **Posthuman**.
 
 ---

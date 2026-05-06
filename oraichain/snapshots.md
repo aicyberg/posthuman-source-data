@@ -35,7 +35,7 @@ rm -rf $HOME/.oraid/data
 > **Note:** Since Posthuman updates snapshots **every 24 hours**, use the latest one:
 
 ```bash
-curl -L https://snapshots.oraichain.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.oraid
+curl -L https://snapshots.oraichain.posthuman.digital/data_latest.zst | zstd -dc - | tar -xf - -C $HOME/.oraid
 ```
 
 

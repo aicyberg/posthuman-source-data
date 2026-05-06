@@ -1,5 +1,8 @@
 # Story Node Snapshot Installation Guide
 
+> ⚠ **Snapshot service unavailable.** snapshots-pruned.story.posthuman.digital does not resolve (DNS missing). Use a community Story snapshot provider until restored.
+
+
 ## Pruned Snapshot Installation
 Updating every 6 hours
 

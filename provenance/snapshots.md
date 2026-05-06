@@ -35,7 +35,7 @@ rm -rf $HOME/.provenanced/data
 > **Note:** Since Posthuman updates snapshots **every 24 hours**, use the latest one:
 
 ```bash
-curl -L https://snapshots.provenance.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.provenanced
+curl -L https://snapshots.provenance.posthuman.digital/data_latest.zst | zstd -dc - | tar -xf - -C $HOME/.provenanced
 ```
 
 

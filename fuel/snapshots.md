@@ -8,7 +8,7 @@ This guide explains how to restore your FUEL node using a snapshot from **Posthu
 Before restoring, stop the FUEL process to prevent database corruption:
 
 ```bash
-sudo systemctl stop fuelsequencerdd
+sudo systemctl stop fuelsequencerd
 ```
 
 ---
@@ -35,7 +35,7 @@ rm -rf $HOME/.fuelsequencerd/data
 > **Note:** Since Posthuman updates snapshots **every 24 hours**, use the latest one:
 
 ```bash
-curl -L https://snapshots.fuel.posthuman.digital/data_latest.lz4 | lz4 -dc - | tar -xf - -C $HOME/.fuelsequencerd
+curl -L https://snapshots.fuel.posthuman.digital/data_latest.zst | zstd -dc - | tar -xf - -C $HOME/.fuelsequencerd
 ```
 
 
